@@ -89,6 +89,8 @@
     <button class="btn-main btn-quiz-5" onclick="startQuiz('eightLectures')"><i class="fa-solid fa-khanda"></i> الـ 8 محاضرات</button>
     <button class="btn-main btn-quiz-6" onclick="startQuiz('importantLast')"><i class="fa-solid fa-skull"></i> مهم / Last</button>
    <button class="btn-main" style="background: linear-gradient(45deg, #082f49, #06b6d4); border: 1px solid #06b6d4; grid-column: 1 / -1; margin-top: 5px;" onclick="startQuiz('pewpew')"><i class="fa-solid fa-user-doctor"></i> بيو بيو (أسئلة الدكتورة)</button>
+                    <button class="btn-main" style="background: linear-gradient(45deg, #312e81, #6366f1); border: 1px solid #6366f1; grid-column: 1 / -1; margin-top: 10px;" onclick="startQuiz('sections')"><i class="fa-solid fa-users-rectangle"></i> أسئلة السكاشن</button>
+
 
 </div>
 
@@ -2090,6 +2092,11 @@ const pewPewQuestions = [
     exp: 'الإجابة الصحيحة: B (تمثيلي/تشريعي)'
   }
 ];
+        // 8. أسئلة السكاشن
+const sectionsQuestions = [
+    // الأسئلة هتنور هنا أول ما تبعتها
+];
+
 
 
 
@@ -2110,6 +2117,8 @@ const pewPewQuestions = [
     else if (type === 'eightLectures') { activeQuiz = eightLecturesQuestions; document.getElementById('quiz-title-display').innerText = "الـ 8 محاضرات"; }
     else if (type === 'importantLast') { activeQuiz = importantLastQuestions; document.getElementById('quiz-title-display').innerText = "مهم / Last"; }
             else if (type === 'pewpew') { activeQuiz = pewPewQuestions; document.getElementById('quiz-title-display').innerText = "بيو بيو - أسئلة الدكتورة"; }
+            else if (type === 'sections') { activeQuiz = sectionsQuestions; document.getElementById('quiz-title-display').innerText = "أسئلة السكاشن الشاملة"; }
+
 
     
     currentIndex = 0; correctAnswers = 0; wrongAnswers = 0;
