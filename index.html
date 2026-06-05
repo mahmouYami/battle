@@ -88,6 +88,8 @@
                 <div class="buttons-grid">
     <button class="btn-main btn-quiz-5" onclick="startQuiz('eightLectures')"><i class="fa-solid fa-khanda"></i> الـ 8 محاضرات</button>
     <button class="btn-main btn-quiz-6" onclick="startQuiz('importantLast')"><i class="fa-solid fa-skull"></i> مهم / Last</button>
+   <button class="btn-main" style="background: linear-gradient(45deg, #082f49, #06b6d4); border: 1px solid #06b6d4; grid-column: 1 / -1; margin-top: 5px;" onclick="startQuiz('pewpew')"><i class="fa-solid fa-user-doctor"></i> بيو بيو (أسئلة الدكتورة)</button>
+
 </div>
 
             </div>
@@ -1483,6 +1485,11 @@ const importantLastQuestions = [
     exp: 'الانفصال في باكستان أدى إلى قيام دولتين مستقلتين (باكستان وبنجلادش) بعد انفصال باكستان الشرقية عن الغربية.'
   }
 ];
+        // 7. أسئلة الدكتورة (بيو بيو)
+const pewPewQuestions = [
+    // الأسئلة هتتحط هنا
+];
+
 
 
         // ==========================================
@@ -1501,6 +1508,8 @@ const importantLastQuestions = [
     // الإضافات الجديدة الخاصة بك
     else if (type === 'eightLectures') { activeQuiz = eightLecturesQuestions; document.getElementById('quiz-title-display').innerText = "الـ 8 محاضرات"; }
     else if (type === 'importantLast') { activeQuiz = importantLastQuestions; document.getElementById('quiz-title-display').innerText = "مهم / Last"; }
+            else if (type === 'pewpew') { activeQuiz = pewPewQuestions; document.getElementById('quiz-title-display').innerText = "بيو بيو - أسئلة الدكتورة"; }
+
     
     currentIndex = 0; correctAnswers = 0; wrongAnswers = 0;
     switchView('quiz-view');
